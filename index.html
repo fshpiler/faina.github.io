@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Faina Shpiler — Creative Director</title><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,700;1,800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Faina Shpiler. Creative Director</title><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,700;1,800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { background: #F5F2EC; color: #111114; font-family: 'Instrument Sans', sans-serif; overflow-x: hidden; }
@@ -33,8 +33,8 @@ a { color: inherit; text-decoration: none; }
 .hero-contact-btn svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
 .hero-band-right { position: relative; overflow: hidden; background: #960082; flex: 1; }
 .hero-band-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-.hero-bottom { background: #F5F2EC; padding: 48px 52px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-.hero-tagline { font-family: 'Instrument Sans', sans-serif; font-size: clamp(18px,2vw,26px); font-weight: 500; line-height: 1.4; letter-spacing: -0.01em; color: #111114; }
+.hero-bottom { background: #F5F2EC; padding: 52px 52px 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.hero-tagline { font-family: 'Instrument Sans', sans-serif; font-size: clamp(18px,2vw,26px); font-weight: 600; line-height: 1.35; letter-spacing: -0.02em; color: #111114; }
 .hero-desc { font-size: 15px; line-height: 1.8; color: #6A6278; font-weight: 300; }
 
 /* ── MARQUEE ── */
@@ -56,34 +56,11 @@ a { color: inherit; text-decoration: none; }
 }
 .sec-h-light { color: rgba(255,255,255,0.5); }
 
-/* ── WHAT I DO ── */
-.what-i-do { background: #F5F2EC; padding: 80px 52px 80px; border-bottom: 1px solid rgba(17,17,20,0.08); }
-.what-i-do-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-  flex-wrap: nowrap;
-}
-.what-i-do-grid span {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: clamp(15px,1.4vw,18px);
-  font-weight: 300;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  color: #111114;
-  display: block;
-  white-space: nowrap;
-  padding: 14px 0;
-}
-.what-i-do-grid span.row2 { margin-top: 0; }
-
 /* ── SELECTED WORKS ── */
 .section { padding: 72px 52px; }
 .section-cream { background: #F5F2EC; }
 .section-deep { background: #5E095E; }
-.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 
 /* each card: white block on cream background */
 .wcard { display: flex; flex-direction: column; background: #fff; }
@@ -91,11 +68,11 @@ a { color: inherit; text-decoration: none; }
 .wcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .wcard-body { padding: 28px 32px 36px; flex: 1; display: flex; flex-direction: column; }
 
-/* company / industry — NO dot, plain mono text */
+/* project tag — company / industry */
 .wcard-meta {
   font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  letter-spacing: 0.02em;
+  font-size: 11px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #6A6278;
   font-weight: 400;
@@ -114,9 +91,9 @@ a { color: inherit; text-decoration: none; }
 .wcard-title {
   font-family: 'Instrument Sans', sans-serif;
   font-size: clamp(16px,1.6vw,20px);
-  font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
   color: #111114;
 }
 
@@ -186,13 +163,12 @@ a { color: inherit; text-decoration: none; }
 .site-footer-link:hover { color: #111114; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ── GLOBAL CONSISTENCY ── */
-.section, .what-i-do, .how-i-work, .site-footer {
+.section, .how-i-work, .site-footer {
   box-sizing: border-box;
 }
-.what-i-do { background: #F5F2EC; padding: 72px 52px; border-bottom: 1px solid rgba(17,17,20,0.08); }
 /* wcard body spacing */
-.wcard-body { padding: 28px 32px 40px; flex: 1; display: flex; flex-direction: column; }
-.wcard-title-row { margin-top: 18px; margin-bottom: 16px; }
+.wcard-body { padding: 32px 36px 44px; flex: 1; display: flex; flex-direction: column; }
+.wcard-title-row { margin-top: 20px; margin-bottom: 14px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
@@ -202,9 +178,6 @@ a { color: inherit; text-decoration: none; }
   .hero-band-left { padding: 48px 24px 40px; }
   .section { padding: 56px 24px; }
   .work-grid { grid-template-columns: 1fr; }
-  .what-i-do { padding: 56px 24px 56px; }
-  .what-i-do-grid { gap: 0; flex-wrap: nowrap; }
-  .what-i-do-grid span { font-size: clamp(14px,4vw,18px); padding: 12px 0; }
   .how-i-work { padding: 56px 24px 56px; }
   .how-schematic { grid-template-columns: 1fr; }
   .how-node { border-right: none; border-bottom: 1px solid rgba(17,17,20,0.12); }
@@ -257,17 +230,6 @@ a { color: inherit; text-decoration: none; }
   </div>
 </div>
 
-<!-- WHAT I DO -->
-<div class="what-i-do reveal-up">
-  <div class="sec-h">I work across</div>
-  <div class="what-i-do-grid">
-    <span>Brand</span>
-    <span>Product</span>
-    <span class="row2">Story</span>
-    <span class="row2">Teams</span>
-  </div>
-</div>
-
 <!-- SELECTED WORKS -->
 <section class="section section-cream" id="work">
   <div class="sec-h reveal-up">Selected works</div>
@@ -304,7 +266,7 @@ a { color: inherit; text-decoration: none; }
     </div>
 
     <div class="wcard reveal-up" style="transition-delay:0.05s">
-      <div class="wcard-img"><img src="project-ixl.png" alt="Product Design — Schools, Mobile & Families"></div>
+      <div class="wcard-img"><img src="project-ixl.png" alt="Product Design. Schools, Mobile and Families"></div>
       <div class="wcard-body">
         <div class="wcard-meta">IXL Learning &nbsp;·&nbsp; EdTech</div>
         <div class="wcard-title-row">

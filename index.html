@@ -38,22 +38,23 @@ a { color: inherit; text-decoration: none; }
 .hero-desc { font-size: 15px; line-height: 1.8; color: #6A6278; font-weight: 300; }
 
 /* ── MARQUEE ── */
-.marquee-wrap { background: #5E095E; overflow: hidden; padding: 18px 0; }
+.marquee-wrap { background: #5E095E; overflow: hidden; padding: 14px 0; }
 .marquee-track { display: flex; animation: marquee 22s linear infinite; white-space: nowrap; }
-.marquee-track span { font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.75); padding: 0 40px; }
+.marquee-track span { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); padding: 0 48px; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ── SHARED SECTION HEADING — all sections match Impact size/font ── */
+/* ── SHARED SECTION HEADING ── */
 .sec-h, .sec-h-light {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 24px;
+  font-size: 11px;
   font-weight: 500;
   line-height: 1.3;
-  letter-spacing: -0.01em;
-  color: #111114;
-  margin-bottom: 40px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9A94A8;
+  margin-bottom: 48px;
 }
-.sec-h-light { color: #fff; }
+.sec-h-light { color: rgba(255,255,255,0.5); }
 
 /* ── WHAT I DO ── */
 .what-i-do { background: #F5F2EC; padding: 80px 52px 80px; border-bottom: 1px solid rgba(17,17,20,0.08); }
@@ -79,10 +80,10 @@ a { color: inherit; text-decoration: none; }
 .what-i-do-grid span.row2 { margin-top: 0; }
 
 /* ── SELECTED WORKS ── */
-.section { padding: 80px 52px; }
+.section { padding: 72px 52px; }
 .section-cream { background: #F5F2EC; }
 .section-deep { background: #5E095E; }
-.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
 /* each card: white block on cream background */
 .wcard { display: flex; flex-direction: column; background: #fff; }
@@ -119,40 +120,58 @@ a { color: inherit; text-decoration: none; }
   color: #111114;
 }
 
-/* Role / Scope / Outcome */
-.wcard-detail { display: flex; flex-direction: column; gap: 12px; }
-.wcard-detail-row { display: flex; gap: 14px; align-items: baseline; }
-.wcard-detail-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #6A6278; flex-shrink: 0; width: 56px; padding-top: 2px; }
-.wcard-detail-val { font-size: 14px; font-weight: 300; color: #333136; line-height: 1.65; }
+/* Editorial prose block — no labels */
+.wcard-detail { display: flex; flex-direction: column; gap: 0; }
+.wcard-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9A94A8;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.wcard-prose {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333136;
+  line-height: 1.75;
+}
 
 /* ── HOW I WORK — schematic ── */
-.how-i-work { background: #F5F2EC; padding: 80px 52px; border-top: 1px solid rgba(17,17,20,0.06); border-bottom: 1px solid rgba(17,17,20,0.06); }
-.how-schematic { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid rgba(17,17,20,0.12); }
-.how-node { padding: 32px 28px 36px; border-right: 1px solid rgba(17,17,20,0.12); position: relative; }
+.how-i-work { background: #F5F2EC; padding: 72px 52px; border-top: 1px solid rgba(17,17,20,0.06); border-bottom: 1px solid rgba(17,17,20,0.06); }
+.how-schematic { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid rgba(17,17,20,0.10); }
+.how-node { padding: 40px 32px 44px; border-right: 1px solid rgba(17,17,20,0.10); position: relative; }
 .how-node:last-child { border-right: none; }
-.how-node-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #B5009A; margin-bottom: 14px; display: block; }
-.how-node-text { font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 400; color: #111114; line-height: 1.5; letter-spacing: -0.01em; }
-.how-node::after { content: '→'; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); font-size: 14px; color: rgba(17,17,20,0.2); background: #F5F2EC; padding: 3px 0; z-index: 1; }
+.how-node-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9A94A8;
+  margin-bottom: 20px;
+  display: block;
+}
+.how-node-text { font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 300; color: #111114; line-height: 1.6; letter-spacing: -0.01em; }
+.how-node::after { content: '→'; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); font-size: 13px; color: rgba(17,17,20,0.15); background: #F5F2EC; padding: 3px 0; z-index: 1; }
 .how-node:last-child::after { display: none; }
 
 /* ── IMPACT ── */
-.impact-list { display: flex; flex-direction: column; }
+.impact-list { display: flex; flex-direction: column; max-width: 680px; }
 .impact-list-item {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 300;
-  color: #fff;
-  line-height: 1.7;
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #ffffff;
+  line-height: 1.5;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   letter-spacing: -0.01em;
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
+  display: block;
 }
-.impact-list-item:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
-.impact-check { font-family: 'DM Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.4); flex-shrink: 0; }
-.impact-num { font-weight: 600; }
+.impact-list-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+.impact-check { display: none; }
+.impact-num { font-weight: 600; color: #fff; }
 
 /* ── CONTACT PHOTO ── */
 .contact-wrap { background: #F5F2EC; }
@@ -160,34 +179,20 @@ a { color: inherit; text-decoration: none; }
 .contact-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
 
 /* ── SITE FOOTER ── */
-.site-footer { padding: 88px 52px 64px; border-top: 1px solid rgba(17,17,20,0.1); background: #F5F2EC; }
-.site-footer-headline { font-family: 'Instrument Sans', sans-serif; font-size: clamp(20px,2.2vw,28px); font-weight: 400; line-height: 1.4; letter-spacing: -0.01em; color: #111114; margin-bottom: 32px; }
+.site-footer { padding: 80px 52px 64px; margin-top: 0; border-top: 1px solid rgba(17,17,20,0.08); background: #F5F2EC; }
+.site-footer-headline { font-family: 'Instrument Sans', sans-serif; font-size: clamp(18px,2vw,24px); font-weight: 400; line-height: 1.5; letter-spacing: -0.01em; color: #111114; margin-bottom: 28px; }
 .site-footer-links { display: flex; flex-direction: column; gap: 10px; }
-.site-footer-link { font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #6A6278; transition: color 0.2s, text-decoration-color 0.2s; text-decoration: none; }
+.site-footer-link { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #6A6278; transition: color 0.2s; text-decoration: none; }
 .site-footer-link:hover { color: #111114; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ── GLOBAL CONSISTENCY ── */
-.section, .what-i-do, .how-i-work, .site-footer, .hero-bottom, .hero-band-left {
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+.section, .what-i-do, .how-i-work, .site-footer {
+  box-sizing: border-box;
 }
-/* Sections that are full-bleed need the inner content constrained */
-.section-cream, .section-deep { max-width: none; }
-.section-cream > *, .section-deep > * { max-width: 1296px; }
-.sec-h, .sec-h-light { max-width: 100%; }
-
-/* Improve how-i-work number alignment */
-.how-node-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #6A6278;
-  margin-bottom: 16px;
-  display: block;
-}
+.what-i-do { background: #F5F2EC; padding: 72px 52px; border-bottom: 1px solid rgba(17,17,20,0.08); }
+/* wcard body spacing */
+.wcard-body { padding: 28px 32px 40px; flex: 1; display: flex; flex-direction: column; }
+.wcard-title-row { margin-top: 18px; margin-bottom: 16px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
@@ -239,7 +244,7 @@ a { color: inherit; text-decoration: none; }
   </div>
   <div class="hero-bottom">
     <div class="hero-tagline reveal-up">Creative direction at the intersection of brand, product, and systems.</div>
-    <div class="hero-desc reveal-up" style="transition-delay:0.12s">25+ years leading design across EdTech, FinTech, and Healthcare — shaping how things look, feel, and work from first concept to shipped product.</div>
+    <div class="hero-desc reveal-up" style="transition-delay:0.12s">25+ years leading design across EdTech, FinTech, and Healthcare. Shaping how things look, feel, and work from first concept to shipped product.</div>
   </div>
   <div class="scroll-arrow">↓</div>
 </div>
@@ -277,9 +282,8 @@ a { color: inherit; text-decoration: none; }
           <span class="wcard-title">Gen-AI Copilot</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Led creative direction across product and visual systems, including AI companion</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Transformed an outdated product into a modern, cohesive experience. Increased adoption and engagement. Built team and established direction</span></div>
+          <div class="wcard-role">Creative Director, Art Director</div>
+          <div class="wcard-prose">Led creative direction across product and visual systems, including AI companion. Transformed an outdated product into a modern, cohesive experience. Increased adoption and engagement while building the team and establishing lasting direction.</div>
         </div>
       </div>
     </div>
@@ -293,9 +297,8 @@ a { color: inherit; text-decoration: none; }
           <span class="wcard-title">Brand Refresh &amp; Campaign System</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director, Team Lead</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Led brand and product redesign across platforms. Defined positioning and built systems for consistency and accessibility</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Shifted brand from insurance to wellness. Unified experience across surfaces. Increased adoption and reduced drop-off. Built team and processes</span></div>
+          <div class="wcard-role">Creative Director, Art Director, Team Lead</div>
+          <div class="wcard-prose">Led brand and product redesign across platforms. Defined positioning and built systems for consistency and accessibility. Shifted brand from insurance to wellness, unified experience across surfaces, and reduced drop-off while growing the team and its processes.</div>
         </div>
       </div>
     </div>
@@ -306,12 +309,11 @@ a { color: inherit; text-decoration: none; }
         <div class="wcard-meta">IXL Learning &nbsp;·&nbsp; EdTech</div>
         <div class="wcard-title-row">
           <span class="wcard-dot" style="background:#0E7A6A;"></span>
-          <span class="wcard-title">Product Design — Schools, Mobile &amp; Families</span>
+          <span class="wcard-title">Product Design. Schools, Mobile &amp; Families</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director, Team Lead</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Led 0–1 product creation, brand, and system development. Built team and processes</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Launched product adopted by millions. Scaled to 14M users. Expanded product and direction</span></div>
+          <div class="wcard-role">Creative Director, Art Director, Team Lead</div>
+          <div class="wcard-prose">Led 0-to-1 product creation, brand, and system development. Built the team and its processes. Launched a product that scaled to <strong>14M+ users</strong> and continued to expand in product scope and direction.</div>
         </div>
       </div>
     </div>
@@ -325,9 +327,8 @@ a { color: inherit; text-decoration: none; }
           <span class="wcard-title">Education Gamified</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director, Strategy</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Defined product, brand, and experience from zero. Developed game-based learning direction</span></div>
-          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Created a new product and experience. Established direction for future expansion</span></div>
+          <div class="wcard-role">Creative Director, Art Director, Strategy</div>
+          <div class="wcard-prose">Defined product, brand, and experience from zero. Developed a game-based learning direction and created a new product from the ground up, establishing the foundation for future expansion.</div>
         </div>
       </div>
     </div>
@@ -341,15 +342,15 @@ a { color: inherit; text-decoration: none; }
   <div class="how-schematic">
     <div class="how-node">
       <span class="how-node-num">01 Start</span>
-      <div class="how-node-text">I start with meaning, not execution.</div>
+      <div class="how-node-text">Meaning comes before execution.</div>
     </div>
     <div class="how-node">
       <span class="how-node-num">02 Define</span>
-      <div class="how-node-text">I define direction that others can carry forward.</div>
+      <div class="how-node-text">Direction is what others can carry forward.</div>
     </div>
     <div class="how-node">
       <span class="how-node-num">03 Build</span>
-      <div class="how-node-text">I build structure so the work holds as it scales.</div>
+      <div class="how-node-text">Structure is what allows the work to last.</div>
     </div>
   </div>
 </div>
@@ -358,10 +359,9 @@ a { color: inherit; text-decoration: none; }
 <section class="section section-deep" id="about">
   <div class="sec-h-light reveal-up">Impact</div>
   <div class="impact-list reveal-up" style="transition-delay:0.1s">
-    <div class="impact-list-item"><span class="impact-check">✓</span>Built products used by <span class="impact-num">14M+</span> students</div>
-    <div class="impact-list-item"><span class="impact-check">✓</span>Led brand and product transformations</div>
-    <div class="impact-list-item"><span class="impact-check">✓</span>Defined systems adopted across teams and platforms</div>
-    <div class="impact-list-item"><span class="impact-check">✓</span>Built and scaled creative teams and processes</div>
+    <div class="impact-list-item"><span class="impact-num">14M+</span> students reached</div>
+    <div class="impact-list-item">Products built and scaled across industries</div>
+    <div class="impact-list-item">Teams and systems established from the ground up</div>
   </div>
 </section>
 

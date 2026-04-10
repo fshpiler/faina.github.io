@@ -15,45 +15,18 @@ a { color: inherit; text-decoration: none; }
 
 /* ── SCROLL ARROW ── */
 @keyframes hint-fade-in { from { opacity: 0; } to { opacity: 1; } }
-@keyframes floatDown {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(7px); }
-}
-.scroll-arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 10;
-  font-size: 20px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1;
-  animation: hint-fade-in 1s ease 1.8s both, floatDown 2.6s ease-in-out 2.8s infinite;
-}
+@keyframes floatDown { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(7px); } }
+.scroll-arrow { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); opacity: 0.4; pointer-events: none; z-index: 10; font-size: 20px; color: rgba(255,255,255,0.7); line-height: 1; animation: hint-fade-in 1s ease 1.8s both, floatDown 2.6s ease-in-out 2.8s infinite; }
 
 /* ── HERO ── */
 .hero { min-height: 90vh; display: flex; flex-direction: column; position: relative; }
 .hero-band { background: #B5009A; display: flex; flex-direction: row; flex: 1; min-height: 0; }
 .hero-band-left { padding: 56px 52px 52px; display: flex; flex-direction: column; justify-content: center; flex: 1; }
 .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
-.hero-name { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(72px, 11vw, 152px); font-weight: 800; font-style: italic; line-height: 0.87; letter-spacing: -0.01em; color: #fff; }
-/* Hero tagline — sits between name and buttons */
-.hero-tagline-inline {
-  margin-top: 24px;
-  margin-bottom: 4px;
-}
-.hero-tagline-inline p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.7);
-}
-.hero-tagline-inline p + p {
-  margin-top: 2px;
-}
+.hero-name { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(72px,11vw,152px); font-weight: 800; font-style: italic; line-height: 0.87; letter-spacing: -0.01em; color: #fff; }
+.hero-tagline-inline { margin-top: 24px; margin-bottom: 4px; }
+.hero-tagline-inline p { font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,0.7); }
+.hero-tagline-inline p + p { margin-top: 2px; }
 .hero-contact { display: flex; gap: 14px; margin-top: 28px; }
 .hero-contact-btn { display: inline-flex; align-items: center; gap: 9px; padding: 11px 20px; border: 1.5px solid rgba(255,255,255,0.4); color: #fff; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, border-color 0.2s; cursor: pointer; }
 .hero-contact-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.7); }
@@ -61,7 +34,7 @@ a { color: inherit; text-decoration: none; }
 .hero-band-right { position: relative; overflow: hidden; background: #960082; flex: 1; }
 .hero-band-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .hero-bottom { background: #F5F2EC; padding: 52px 52px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-.hero-tagline { font-family: 'Instrument Sans', sans-serif; font-size: clamp(22px, 2.6vw, 34px); font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; color: #111114; }
+.hero-tagline { font-family: 'Instrument Sans', sans-serif; font-size: clamp(22px,2.6vw,34px); font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; color: #111114; }
 .hero-desc { font-size: 15px; line-height: 1.8; color: #6A6278; font-weight: 300; }
 
 /* ── MARQUEE ── */
@@ -70,28 +43,29 @@ a { color: inherit; text-decoration: none; }
 .marquee-track span { font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.75); padding: 0 40px; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
+/* ── SHARED SECTION HEADING — all sections match Impact size/font ── */
+.sec-h, .sec-h-light {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: clamp(22px,2.6vw,34px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #111114;
+  margin-bottom: 40px;
+}
+.sec-h-light { color: #fff; }
+
 /* ── WHAT I DO ── */
-.what-i-do {
-  background: #F5F2EC;
-  padding: 80px 52px 88px;
-  border-bottom: 1px solid rgba(17,17,20,0.08);
+.what-i-do { background: #F5F2EC; padding: 80px 52px 88px; border-bottom: 1px solid rgba(17,17,20,0.08); }
+.what-i-do-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  max-width: 640px;
 }
-.what-i-do-intro {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #9A94A8;
-  margin-bottom: 32px;
-}
-.what-i-do-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.what-i-do-list span {
+.what-i-do-grid span {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(52px, 9vw, 120px);
+  font-size: clamp(52px,9vw,120px);
   font-weight: 800;
   font-style: italic;
   line-height: 0.92;
@@ -99,166 +73,113 @@ a { color: inherit; text-decoration: none; }
   color: #111114;
   display: block;
 }
-.what-i-do-list span.dim { color: rgba(17,17,20,0.18); }
+/* half of 56px = 28px gap between row 1 and row 2 */
+.what-i-do-grid span.row2 { margin-top: 28px; }
 
-/* ── SECTIONS ── */
+/* ── SELECTED WORKS ── */
 .section { padding: 72px 52px; }
 .section-cream { background: #F5F2EC; }
 .section-deep { background: #1E0A2E; }
-.sec-h { font-family: 'Instrument Sans', sans-serif; font-size: clamp(22px, 2.6vw, 34px); font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; color: #111114; margin-bottom: 52px; }
-.sec-h-light { font-family: 'Instrument Sans', sans-serif; font-size: clamp(22px, 2.6vw, 34px); font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; color: #fff; margin-bottom: 40px; }
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-/* ── WORK CARDS ── */
-.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.wcard { display: flex; flex-direction: column; background: #F5F2EC; }
+/* each card: white block on cream background */
+.wcard { display: flex; flex-direction: column; background: #fff; }
 .wcard-img { width: 100%; aspect-ratio: 16/9; overflow: hidden; flex-shrink: 0; }
 .wcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-.wcard-body { padding: 36px 40px 44px; flex: 1; display: flex; flex-direction: column; }
-.wcard-meta { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #9A94A8; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-.wcard-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.wcard-title { font-family: 'Instrument Sans', sans-serif; font-size: clamp(22px, 2.4vw, 30px); font-weight: 500; line-height: 1.25; letter-spacing: -0.01em; color: #111114; margin-bottom: 20px; }
-.wcard-desc { font-size: 14px; color: #6A6278; line-height: 1.75; font-weight: 300; flex: 1; }
-.wcard-stat { font-size: 14px; font-weight: 300; color: #6A6278; line-height: 1.75; margin-top: 12px; }
-/* Project detail rows: Role / Scope / Outcome */
-.wcard-detail {
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(17,17,20,0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.wcard-detail-row { display: flex; gap: 16px; align-items: baseline; }
-.wcard-detail-label {
+.wcard-body { padding: 28px 32px 36px; flex: 1; display: flex; flex-direction: column; }
+
+/* company / industry — NO dot, plain mono text */
+.wcard-meta {
   font-family: 'DM Mono', monospace;
-  font-size: 8px;
-  letter-spacing: 0.14em;
+  font-size: 12px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #9A94A8;
-  flex-shrink: 0;
-  width: 56px;
-  padding-top: 2px;
-}
-.wcard-detail-val {
-  font-size: 13px;
-  font-weight: 300;
-  color: #6A6278;
-  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
-/* ── IMPACT (was stats) ── */
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.stat-col { padding: 44px 36px 48px; display: flex; flex-direction: column; gap: 16px; }
-.stat-val { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(56px, 7vw, 108px); font-weight: 800; font-style: italic; color: #fff; line-height: 1; letter-spacing: -0.01em; display: flex; align-items: baseline; gap: 0; }
-.stat-suffix { font-size: 0.62em; }
-.stat-prefix { font-size: 0.62em; }
-.stat-val.mg { color: #E040CC; }
-.stat-val.tl { color: #4CCFBE; }
-.stat-val.wh { color: #fff; }
-.stat-lbl { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: rgba(255,255,255,0.35); text-transform: uppercase; line-height: 1.6; max-width: 22ch; }
-/* Impact bullet list (replaces counter grid) */
-.impact-list {
+/* project title row — dot lives HERE now */
+.wcard-title-row {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  align-items: baseline;
+  gap: 9px;
+  margin-top: 20px;   /* 2x space between meta and title */
+  margin-bottom: 20px;
 }
+.wcard-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; position: relative; top: -1px; }
+.wcard-title {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: clamp(18px,2vw,24px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #111114;
+}
+
+/* Role / Scope / Outcome — NO dividing line above */
+.wcard-detail { display: flex; flex-direction: column; gap: 12px; }
+.wcard-detail-row { display: flex; gap: 14px; align-items: baseline; }
+.wcard-detail-label { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: #9A94A8; flex-shrink: 0; width: 52px; padding-top: 2px; }
+.wcard-detail-val { font-size: 13px; font-weight: 300; color: #6A6278; line-height: 1.6; }
+
+/* ── HOW I WORK — schematic ── */
+.how-i-work { background: #F5F2EC; padding: 80px 52px 88px; border-top: 1px solid rgba(17,17,20,0.06); border-bottom: 1px solid rgba(17,17,20,0.06); }
+.how-schematic { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid rgba(17,17,20,0.12); }
+.how-node { padding: 32px 28px 36px; border-right: 1px solid rgba(17,17,20,0.12); position: relative; }
+.how-node:last-child { border-right: none; }
+.how-node-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #B5009A; margin-bottom: 14px; display: block; }
+.how-node-text { font-family: 'Instrument Sans', sans-serif; font-size: clamp(14px,1.5vw,17px); font-weight: 400; color: #111114; line-height: 1.5; letter-spacing: -0.01em; }
+.how-node::after { content: '→'; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); font-size: 14px; color: rgba(17,17,20,0.2); background: #F5F2EC; padding: 3px 0; z-index: 1; }
+.how-node:last-child::after { display: none; }
+
+/* ── IMPACT ── */
+.impact-list { display: flex; flex-direction: column; }
 .impact-list-item {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: clamp(18px, 2.2vw, 26px);
+  font-size: clamp(16px,2vw,22px);
   font-weight: 300;
   color: rgba(255,255,255,0.75);
   line-height: 1.4;
-  padding: 22px 0;
+  padding: 20px 0;
   border-bottom: 1px solid rgba(255,255,255,0.07);
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
 }
 .impact-list-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.impact-check { font-family: 'DM Mono', monospace; font-size: 12px; color: #B5009A; flex-shrink: 0; }
 
-/* ── HOW I WORK ── */
-.how-i-work {
-  background: #F5F2EC;
-  padding: 80px 52px 88px;
-  border-top: 1px solid rgba(17,17,20,0.06);
-  border-bottom: 1px solid rgba(17,17,20,0.06);
-}
-.how-i-work-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #9A94A8;
-  margin-bottom: 36px;
-}
-.how-i-work-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  max-width: 680px;
-}
-.how-i-work-body p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: clamp(18px, 2vw, 24px);
-  font-weight: 300;
-  color: #111114;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(17,17,20,0.07);
-}
-.how-i-work-body p:first-child { border-top: 1px solid rgba(17,17,20,0.07); }
-
-/* ── CONTACT / FOOTER ── */
-.contact-wrap { background: #F5F2EC; border-top: 1px solid rgba(17,17,20,0.08); }
+/* ── CONTACT PHOTO ── */
+.contact-wrap { background: #F5F2EC; }
 .contact-photo { width: 100%; aspect-ratio: 16/6; overflow: hidden; }
 .contact-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
-/* New minimal footer */
-.site-footer {
-  padding: 100px 52px 72px;
-  border-top: 1px solid rgba(17,17,20,0.1);
-  background: #F5F2EC;
-}
-.site-footer-headline {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(36px, 5vw, 72px);
-  font-weight: 800;
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  color: #111114;
-  margin-bottom: 40px;
-}
-.site-footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.site-footer-link {
-  font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  color: #6A6278;
-  transition: color 0.2s;
-}
+
+/* ── SITE FOOTER ── */
+.site-footer { padding: 100px 52px 72px; border-top: 1px solid rgba(17,17,20,0.1); background: #F5F2EC; }
+.site-footer-headline { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px,5vw,72px); font-weight: 800; font-style: italic; line-height: 1; letter-spacing: -0.01em; color: #111114; margin-bottom: 32px; }
+.site-footer-links { display: flex; flex-direction: column; gap: 8px; }
+.site-footer-link { font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #6A6278; transition: color 0.2s; }
 .site-footer-link:hover { color: #B5009A; }
 
-/* old contact footer (kept for reference, now replaced) */
-.contact-footer { display: none; }
-
-@keyframes bounceDown { 0%, 100% { transform: translateY(0); opacity: 0.7; } 50% { transform: translateY(7px); opacity: 1; } }
-
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero-band { flex-direction: column; }
   .hero-band-right { min-height: 55vw; flex: none; }
   .hero-bottom { grid-template-columns: 1fr; padding: 40px 24px 56px; }
+  .hero-band-left { padding: 48px 24px 40px; }
   .section { padding: 56px 24px; }
   .work-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-col { padding: 32px 20px 36px; }
-  .hero-band-left { padding: 48px 24px 40px; }
   .what-i-do { padding: 60px 24px 68px; }
+  .what-i-do-grid { max-width: 100%; }
+  .what-i-do-grid span { font-size: clamp(48px,14vw,88px); }
   .how-i-work { padding: 60px 24px 68px; }
+  .how-schematic { grid-template-columns: 1fr; }
+  .how-node { border-right: none; border-bottom: 1px solid rgba(17,17,20,0.12); }
+  .how-node:last-child { border-bottom: none; }
+  .how-node::after { display: none; }
   .site-footer { padding: 72px 24px 52px; }
-  .what-i-do-list span { font-size: clamp(48px, 14vw, 88px); }
 }
 </style></head><body>
 
@@ -271,7 +192,6 @@ a { color: inherit; text-decoration: none; }
         <span class="reveal-line"><span class="reveal-line-inner">FAINA</span></span>
         <span class="reveal-line"><span class="reveal-line-inner" style="color:rgba(255,255,255,0.22);">SHPILER.</span></span>
       </div>
-      <!-- Text between name and buttons -->
       <div class="hero-tagline-inline reveal-fade" style="transition-delay:0.4s">
         <p>From undefined to distinct to scalable.</p>
         <p>I define direction. I build what holds.</p>
@@ -308,38 +228,32 @@ a { color: inherit; text-decoration: none; }
 
 <!-- WHAT I DO -->
 <div class="what-i-do reveal-up">
-  <div class="what-i-do-intro">I work across</div>
-  <div class="what-i-do-list">
+  <div class="sec-h">I work across</div>
+  <div class="what-i-do-grid">
     <span>Brand</span>
     <span>Product</span>
-    <span>Story</span>
-    <span>Teams</span>
+    <span class="row2">Story</span>
+    <span class="row2">Teams</span>
   </div>
 </div>
 
-<!-- SELECTED WORK -->
+<!-- SELECTED WORKS -->
 <section class="section section-cream" id="work">
-  <h2 class="sec-h reveal-up">Selected works</h2>
+  <div class="sec-h reveal-up">Selected works</div>
   <div class="work-grid">
 
     <div class="wcard reveal-up" style="transition-delay:0s">
-      <div class="wcard-img"><img src="project-q2.jpg" alt="Gen-AI Pricing Bot & Back Office Redesign"></div>
+      <div class="wcard-img"><img src="project-q2.jpg" alt="Gen-AI Copilot"></div>
       <div class="wcard-body">
-        <div class="wcard-meta"><span class="wcard-dot" style="background:#B5009A;"></span>Q2 E-Banking &nbsp;·&nbsp; FinTech</div>
-        <div class="wcard-title">Gen-AI Pricing Bot &amp; Back Office Redesign</div>
+        <div class="wcard-meta">Q2 E-Banking &nbsp;·&nbsp; FinTech</div>
+        <div class="wcard-title-row">
+          <span class="wcard-dot" style="background:#B5009A;"></span>
+          <span class="wcard-title">Gen-AI Copilot</span>
+        </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Role</span>
-            <span class="wcard-detail-val">Creative Director, Art Director</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Scope</span>
-            <span class="wcard-detail-val">Led creative direction across product and visual systems, including AI companion and reporting tools</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Outcome</span>
-            <span class="wcard-detail-val">Transformed an outdated product into a modern, cohesive experience. Increased adoption and engagement. Built team and established direction</span>
-          </div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Led creative direction across product and visual systems, including AI companion</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Transformed an outdated product into a modern, cohesive experience. Increased adoption and engagement. Built team and established direction</span></div>
         </div>
       </div>
     </div>
@@ -347,21 +261,15 @@ a { color: inherit; text-decoration: none; }
     <div class="wcard reveal-up" style="transition-delay:0.1s">
       <div class="wcard-img"><img src="project-deltadental.jpg" alt="Brand Refresh & Campaign System"></div>
       <div class="wcard-body">
-        <div class="wcard-meta"><span class="wcard-dot" style="background:#5228E0;"></span>Delta Dental &nbsp;·&nbsp; Healthcare</div>
-        <div class="wcard-title">Brand Refresh &amp; Campaign System</div>
+        <div class="wcard-meta">Delta Dental &nbsp;·&nbsp; Wellness</div>
+        <div class="wcard-title-row">
+          <span class="wcard-dot" style="background:#5228E0;"></span>
+          <span class="wcard-title">Brand Refresh &amp; Campaign System</span>
+        </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Role</span>
-            <span class="wcard-detail-val">Creative Director, Art Director, Team Lead</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Scope</span>
-            <span class="wcard-detail-val">Led brand and product redesign across platforms. Defined positioning and built systems for consistency and accessibility</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Outcome</span>
-            <span class="wcard-detail-val">Shifted brand from insurance to healthcare. Unified experience across surfaces. Increased adoption and reduced drop-off. Built team and processes</span>
-          </div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director, Team Lead</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Led brand and product redesign across platforms. Defined positioning and built systems for consistency and accessibility</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Shifted brand from insurance to wellness. Unified experience across surfaces. Increased adoption and reduced drop-off. Built team and processes</span></div>
         </div>
       </div>
     </div>
@@ -369,43 +277,31 @@ a { color: inherit; text-decoration: none; }
     <div class="wcard reveal-up" style="transition-delay:0.05s">
       <div class="wcard-img"><img src="project-ixl.png" alt="Product Design — Schools, Mobile & Families"></div>
       <div class="wcard-body">
-        <div class="wcard-meta"><span class="wcard-dot" style="background:#0E7A6A;"></span>IXL Learning &nbsp;·&nbsp; EdTech</div>
-        <div class="wcard-title">Product Design — Schools, Mobile &amp; Families</div>
+        <div class="wcard-meta">IXL Learning &nbsp;·&nbsp; EdTech</div>
+        <div class="wcard-title-row">
+          <span class="wcard-dot" style="background:#0E7A6A;"></span>
+          <span class="wcard-title">Product Design — Schools, Mobile &amp; Families</span>
+        </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Role</span>
-            <span class="wcard-detail-val">Creative Director, Art Director, Team Lead</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Scope</span>
-            <span class="wcard-detail-val">Led 0–1 product creation, brand, and system development. Built team and processes</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Outcome</span>
-            <span class="wcard-detail-val">Launched product adopted by millions. Scaled to 14M users. Expanded product and direction</span>
-          </div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director, Team Lead</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Led 0–1 product creation, brand, and system development. Built team and processes</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Launched product adopted by millions. Scaled to 14M users. Expanded product and direction</span></div>
         </div>
       </div>
     </div>
 
     <div class="wcard reveal-up" style="transition-delay:0.15s">
-      <div class="wcard-img"><img src="project-sugarcane.jpg" alt="Educational Game Platform"></div>
+      <div class="wcard-img"><img src="project-sugarcane.jpg" alt="Education Gamified"></div>
       <div class="wcard-body">
-        <div class="wcard-meta"><span class="wcard-dot" style="background:#B5009A;"></span>Sugarcane Games &nbsp;·&nbsp; EdTech</div>
-        <div class="wcard-title">Education Gamified</div>
+        <div class="wcard-meta">Sugarcane Games &nbsp;·&nbsp; EdTech</div>
+        <div class="wcard-title-row">
+          <span class="wcard-dot" style="background:#B5009A;"></span>
+          <span class="wcard-title">Education Gamified</span>
+        </div>
         <div class="wcard-detail">
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Role</span>
-            <span class="wcard-detail-val">Creative Director, Art Director, Strategy</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Scope</span>
-            <span class="wcard-detail-val">Defined product, brand, and experience from zero. Developed game-based learning direction</span>
-          </div>
-          <div class="wcard-detail-row">
-            <span class="wcard-detail-label">Outcome</span>
-            <span class="wcard-detail-val">Created a new product and experience. Established direction for future expansion</span>
-          </div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Role</span><span class="wcard-detail-val">Creative Director, Art Director, Strategy</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Scope</span><span class="wcard-detail-val">Defined product, brand, and experience from zero. Developed game-based learning direction</span></div>
+          <div class="wcard-detail-row"><span class="wcard-detail-label">Outcome</span><span class="wcard-detail-val">Created a new product and experience. Established direction for future expansion</span></div>
         </div>
       </div>
     </div>
@@ -415,38 +311,47 @@ a { color: inherit; text-decoration: none; }
 
 <!-- HOW I WORK -->
 <div class="how-i-work reveal-up">
-  <div class="how-i-work-label">How I work</div>
-  <div class="how-i-work-body">
-    <p>I start with meaning, not execution.</p>
-    <p>I define direction that others can carry forward.</p>
-    <p>I build structure so the work holds as it scales.</p>
+  <div class="sec-h">How I work</div>
+  <div class="how-schematic">
+    <div class="how-node">
+      <span class="how-node-num">01 — Start</span>
+      <div class="how-node-text">I start with meaning, not execution.</div>
+    </div>
+    <div class="how-node">
+      <span class="how-node-num">02 — Define</span>
+      <div class="how-node-text">I define direction that others can carry forward.</div>
+    </div>
+    <div class="how-node">
+      <span class="how-node-num">03 — Build</span>
+      <div class="how-node-text">I build structure so the work holds as it scales.</div>
+    </div>
   </div>
 </div>
 
 <!-- IMPACT -->
 <section class="section section-deep" id="about">
-  <h2 class="sec-h-light reveal-up">Impact</h2>
+  <div class="sec-h-light reveal-up">Impact</div>
   <div class="impact-list reveal-up" style="transition-delay:0.1s">
-    <div class="impact-list-item">Built products used by 14M+ students</div>
-    <div class="impact-list-item">Led brand and product transformations</div>
-    <div class="impact-list-item">Defined systems adopted across teams and platforms</div>
-    <div class="impact-list-item">Built and scaled creative teams and processes</div>
+    <div class="impact-list-item"><span class="impact-check">✓</span>Built products used by 14M+ students</div>
+    <div class="impact-list-item"><span class="impact-check">✓</span>Led brand and product transformations</div>
+    <div class="impact-list-item"><span class="impact-check">✓</span>Defined systems adopted across teams and platforms</div>
+    <div class="impact-list-item"><span class="impact-check">✓</span>Built and scaled creative teams and processes</div>
   </div>
 </section>
 
-<!-- CONTACT PHOTO + FOOTER -->
+<!-- CONTACT PHOTO -->
 <div class="contact-wrap" id="contact">
   <div class="contact-photo reveal-fade">
     <img src="about.jpg" alt="Faina leading a design workshop">
   </div>
 </div>
 
-<!-- SITE FOOTER -->
+<!-- FOOTER -->
 <footer class="site-footer reveal-up">
   <div class="site-footer-headline">Let's build something that holds.</div>
   <div class="site-footer-links">
     <a href="mailto:fshpiler@gmail.com" class="site-footer-link">fshpiler@gmail.com</a>
-    <a href="https://www.linkedin.com/in/faina/" class="site-footer-link" target="_blank" rel="noopener">LinkedIn →</a>
+    <a href="https://www.linkedin.com/in/faina/" class="site-footer-link" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </footer>
 
@@ -466,8 +371,8 @@ window.addEventListener('load', () => {
 });
 
 const scrollEls = document.querySelectorAll(
-  '.section .reveal-up, .section .reveal-fade, .section .reveal-line-inner, ' +
-  '.contact-wrap .reveal-up, .contact-wrap .reveal-fade, ' +
+  '.section .reveal-up, .section .reveal-fade, .section .reveal-line-inner,' +
+  '.contact-wrap .reveal-fade,' +
   '.what-i-do.reveal-up, .how-i-work.reveal-up, .site-footer.reveal-up'
 );
 const revealObserver = new IntersectionObserver((entries) => {
@@ -479,28 +384,5 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -28px 0px' });
 scrollEls.forEach(el => revealObserver.observe(el));
-
-function easeOutExpo(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
-function runCounter(el) {
-  const target = parseFloat(el.dataset.target);
-  const duration = 1600;
-  const start = performance.now();
-  function step(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    el.textContent = Math.floor(easeOutExpo(progress) * target);
-    if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = target;
-  }
-  requestAnimationFrame(step);
-}
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      runCounter(entry.target);
-      counterObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.4 });
-document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
 </script>
 </body></html>

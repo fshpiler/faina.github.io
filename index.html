@@ -1,10 +1,13 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Faina Shpiler. Creative Director</title><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,700;1,800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: #F5F2EC; color: #111114; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Instrument Sans", sans-serif; font-size: 15px; line-height: 1.5; overflow-x: hidden; }
+body { background: #F5F2EC; color: #111114; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; font-size: 15px; line-height: 1.5; overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
+h1 { font-size: 44px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.1; }
+h2 { font-size: 26px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 12px; }
 p { font-size: 15px; line-height: 1.6; }
 p + p { margin-top: 8px; }
+.tags { font-size: 13px; letter-spacing: 0.02em; }
 
 /* ── ANIMATIONS ── */
 .reveal-line { overflow: hidden; display: block; }
@@ -59,7 +62,7 @@ p + p { margin-top: 8px; }
 .sec-h-light { color: rgba(255,255,255,0.5); }
 
 /* ── SELECTED WORKS ── */
-.section { padding: 64px 52px; }
+.section { padding: 64px 52px; margin-top: 64px; margin-bottom: 64px; }
 .section-cream { background: #F5F2EC; }
 .section-deep { background: #5E095E; }
 .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -102,15 +105,6 @@ p + p { margin-top: 8px; }
 
 /* Editorial prose block — no labels */
 .wcard-detail { display: flex; flex-direction: column; gap: 0; }
-.wcard-role {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #9A94A8;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
 .wcard-prose {
   font-size: 15px;
   font-weight: 300;
@@ -118,29 +112,28 @@ p + p { margin-top: 8px; }
   line-height: 1.6;
   margin-bottom: 12px;
 }
+.wcard-prose + .wcard-prose { margin-top: 8px; }
 
 /* ── HOW I WORK — schematic ── */
-.how-i-work { background: #F5F2EC; padding: 56px 52px; border-top: 1px solid rgba(17,17,20,0.06); border-bottom: 1px solid rgba(17,17,20,0.06); }
-.how-schematic { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid rgba(17,17,20,0.10); }
-.how-node { padding: 40px 32px 44px; border-right: 1px solid rgba(17,17,20,0.10); position: relative; }
-.how-node:last-child { border-right: none; }
+.how-i-work { background: #F5F2EC; padding: 64px 52px; margin-top: 0; margin-bottom: 0; }
+.how-schematic { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.how-node { padding: 0 32px 0 0; position: relative; }
+.how-node:last-child { padding-right: 0; }
 .how-node-num {
   font-family: 'DM Mono', monospace;
   font-size: 9px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #9A94A8;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   display: block;
 }
-.how-node-text { font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 300; color: #111114; line-height: 1.6; letter-spacing: -0.01em; }
-.how-node::after { content: '→'; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); font-size: 13px; color: rgba(17,17,20,0.15); background: #F5F2EC; padding: 3px 0; z-index: 1; }
-.how-node:last-child::after { display: none; }
+.how-node-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; font-size: 15px; font-weight: 300; color: #111114; line-height: 1.6; letter-spacing: -0.01em; }
 
 /* ── IMPACT ── */
 .impact-list { display: flex; flex-direction: column; max-width: 680px; }
 .impact-list-item {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Instrument Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
   font-size: 19px;
   font-weight: 300;
   color: #ffffff;
@@ -161,7 +154,7 @@ p + p { margin-top: 8px; }
 
 /* ── SITE FOOTER ── */
 .site-footer { padding: 40px 52px 64px; margin-top: 120px; border-top: 1px solid rgba(17,17,20,0.1); background: #F5F2EC; }
-.site-footer-headline { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Instrument Sans", sans-serif; font-size: clamp(18px,2vw,24px); font-weight: 400; line-height: 1.5; letter-spacing: -0.01em; color: #111114; margin-bottom: 24px; }
+.site-footer-headline { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; font-size: clamp(18px,2vw,24px); font-weight: 400; line-height: 1.5; letter-spacing: -0.01em; color: #111114; margin-bottom: 24px; }
 .site-footer-links { display: flex; flex-direction: column; gap: 10px; }
 .site-footer-link { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #6A6278; transition: color 0.2s; text-decoration: none; }
 .site-footer-link:hover { color: #111114; text-decoration: underline; text-underline-offset: 3px; }
@@ -220,8 +213,8 @@ p + p { margin-top: 8px; }
     </div>
   </div>
   <div class="hero-bottom">
-    <div class="hero-tagline reveal-up">Creative direction at the intersection of brand, product, and systems.</div>
-    <div class="hero-desc reveal-up" style="transition-delay:0.12s">25+ years leading design across EdTech, FinTech, and Healthcare. Shaping how things look, feel, and work from first concept to shipped product.</div>
+    <div class="hero-tagline reveal-up">Direction across brand and product.</div>
+    <div class="hero-desc reveal-up" style="transition-delay:0.12s">From undefined to distinct to scalable. I build what holds.</div>
   </div>
   <div class="scroll-arrow">↓</div>
 </div>
@@ -240,61 +233,61 @@ p + p { margin-top: 8px; }
   <div class="work-grid">
 
     <div class="wcard reveal-up" style="transition-delay:0s">
-      <div class="wcard-img"><img src="project-q2.jpg" alt="Gen-AI Copilot"></div>
+      <div class="wcard-img"><img src="project-q2.jpg" alt="Q2"></div>
       <div class="wcard-body">
         <div class="wcard-meta">Q2 E-Banking &nbsp;·&nbsp; FinTech</div>
         <div class="wcard-title-row">
-          <span class="wcard-dot" style="background:#B5009A;"></span>
-          <span class="wcard-title">Gen-AI Copilot</span>
+          <span class="wcard-title">Q2</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-role">Creative Director, Art Director</div>
-          <div class="wcard-prose">Led creative direction across product and visual systems, including AI companion. Transformed an outdated product into a modern, cohesive experience. Increased adoption and engagement while building the team and establishing lasting direction.</div>
+          <div class="wcard-prose">An outdated product, fragmented across tools and teams.</div>
+          <div class="wcard-prose">Direction was reset across product and visual systems, including the AI companion and reporting platform. The work became coherent. The experience became usable.</div>
+          <div class="wcard-prose">Adoption increased. The product started to carry its weight.</div>
         </div>
       </div>
     </div>
 
     <div class="wcard reveal-up" style="transition-delay:0.1s">
-      <div class="wcard-img"><img src="project-deltadental.jpg" alt="Brand Refresh & Campaign System"></div>
+      <div class="wcard-img"><img src="project-deltadental.jpg" alt="Delta Dental of California"></div>
       <div class="wcard-body">
         <div class="wcard-meta">Delta Dental &nbsp;·&nbsp; Wellness</div>
         <div class="wcard-title-row">
-          <span class="wcard-dot" style="background:#5228E0;"></span>
-          <span class="wcard-title">Brand Refresh &amp; Campaign System</span>
+          <span class="wcard-title">Delta Dental of California</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-role">Creative Director, Art Director, Team Lead</div>
-          <div class="wcard-prose">Led brand and product redesign across platforms. Defined positioning and built systems for consistency and accessibility. Shifted brand from insurance to wellness, unified experience across surfaces, and reduced drop-off while growing the team and its processes.</div>
+          <div class="wcard-prose">A legacy brand, limited to insurance. Fragmented across platforms. Losing relevance.</div>
+          <div class="wcard-prose">The work shifted the center. From insurance to health and wellness. From disconnected surfaces to a unified system.</div>
+          <div class="wcard-prose">The brand became modern. The product became accessible. The experience started to hold together.</div>
         </div>
       </div>
     </div>
 
     <div class="wcard reveal-up" style="transition-delay:0.05s">
-      <div class="wcard-img"><img src="project-ixl.png" alt="Product Design. Schools, Mobile and Families"></div>
+      <div class="wcard-img"><img src="project-ixl.png" alt="IXL Learning"></div>
       <div class="wcard-body">
         <div class="wcard-meta">IXL Learning &nbsp;·&nbsp; EdTech</div>
         <div class="wcard-title-row">
-          <span class="wcard-dot" style="background:#0E7A6A;"></span>
-          <span class="wcard-title">Product Design. Schools, Mobile &amp; Families</span>
+          <span class="wcard-title">IXL Learning</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-role">Creative Director, Art Director, Team Lead</div>
-          <div class="wcard-prose">Led 0-to-1 product creation, brand, and system development. Built the team and its processes. Launched a product that scaled to <strong>14M+ users</strong> and continued to expand in product scope and direction.</div>
+          <div class="wcard-prose">No product. No system. No foundation.</div>
+          <div class="wcard-prose">A product was built from zero. Teams were formed. Processes were defined. The work scaled quickly.</div>
+          <div class="wcard-prose">Today, over 14M students use it.</div>
         </div>
       </div>
     </div>
 
     <div class="wcard reveal-up" style="transition-delay:0.15s">
-      <div class="wcard-img"><img src="project-sugarcane.jpg" alt="Education Gamified"></div>
+      <div class="wcard-img"><img src="project-sugarcane.jpg" alt="Sugarcane"></div>
       <div class="wcard-body">
         <div class="wcard-meta">Sugarcane Games &nbsp;·&nbsp; EdTech</div>
         <div class="wcard-title-row">
-          <span class="wcard-dot" style="background:#B5009A;"></span>
-          <span class="wcard-title">Education Gamified</span>
+          <span class="wcard-title">Sugarcane</span>
         </div>
         <div class="wcard-detail">
-          <div class="wcard-role">Creative Director, Art Director, Strategy</div>
-          <div class="wcard-prose">Defined product, brand, and experience from zero. Developed a game-based learning direction and created a new product from the ground up, establishing the foundation for future expansion.</div>
+          <div class="wcard-prose">No product. Just an idea.</div>
+          <div class="wcard-prose">A new experience was created. Learning became interactive. Kids could play to practice.</div>
+          <div class="wcard-prose">The foundation was set for something entirely new.</div>
         </div>
       </div>
     </div>
@@ -343,23 +336,15 @@ p + p { margin-top: 8px; }
   <div class="site-footer-headline">Let's build something that holds.</div>
   <div class="site-footer-links">
     <a href="mailto:fshpiler@gmail.com" class="site-footer-link">fshpiler@gmail.com</a>
-    <a href="https://www.linkedin.com/in/faina/" class="site-footer-link" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/faina/" class="site-footer-link" target="_blank" rel="noopener">LinkedIn →</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.documentElement.classList.add('js-ready');
 
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.querySelectorAll('.hero .reveal-fade').forEach(el => el.classList.add('in'));
   }, 80);
-  document.querySelectorAll('.hero .reveal-line-inner').forEach((el, i) => {
-    setTimeout(() => el.classList.add('in'), 180 + i * 150);
-  });
-  setTimeout(() => {
-    document.querySelectorAll('.hero .reveal-up').forEach(el => el.classList.add('in'));
-  }, 420);
-});
-
-const scrollEls = document
+  document.que
